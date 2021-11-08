@@ -1,19 +1,134 @@
 .roadmap {
+  padding: 50px 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 
+  @media all and (min-width: 1440px) {
+    padding: 100px 150px;
+    flex-direction: row;
+  }
 
   .firstBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media all and (min-width: 1440px) {
+      align-items: normal;
+    }
 
     .title {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 125%;
+      @media all and (min-width: 1440px) {
+        font-size: 54px;
+      }
+
+
+      span:last-child {
+        white-space: pre-wrap;
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, #A6C17B 12.01%, #E1A56A 58.98%, #D4517F 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+      }
+
 
     }
 
     .text {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 180%;
+      color: #D1D3DC;
+      margin-top: 11px;
+      @media all and (min-width: 1440px) {
+        font-size: 16px;
+        margin-top: 25px;
+      }
 
     }
 
   }
 
   .secondBlock {
+    position: relative;
+    @media all and (min-width: 1440px) {
+      margin-left: 145px;
+    }
+
+
+    .items {
+      position: relative;
+
+      .itemWrapper {
+        padding-left: 15px;
+        position: relative;
+
+        &:not(:last-child) {
+          padding-bottom: 40px;
+          border-left: 1px solid #D4AC6E;
+        }
+
+        .innerWrapper {
+          padding-left: 30px;
+          position: relative;
+          z-index: 1;
+
+          .title {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 180%;
+            @media all and (min-width: 1440px) {
+              font-size: 24px;
+            }
+
+          }
+
+          .text {
+            margin-top: 8px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 180%;
+            color: #D1D3DC;
+            @media all and (min-width: 1440px) {
+              font-size: 16px;
+            }
+          }
+
+
+        }
+
+        .circle {
+          z-index: 2;
+          position: absolute;
+          top: 0px;
+          left: 0;
+          transform: translateX(-50%);
+          background: #111523;
+          width: 30px;
+          height: 30px;
+          border: 2px solid #A6C17B;
+          box-sizing: border-box;
+          border-radius: 50%;
+
+
+        }
+
+      }
+
+    }
 
   }
 

@@ -52,8 +52,9 @@ export const BurgerMenu:FC<IBurgerMenu> = ({isBurgerIsOpen, onClickHandler}) => 
 
             <a href="#"
                className={style.button}
-            >
                onClick={onClickHandler}
+            >
+
                 Connect Wallet
             </a>
 

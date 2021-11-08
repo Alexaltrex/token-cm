@@ -6,7 +6,7 @@ export interface IItem {
     text: string
 }
 
-export const Roadmap:FC = () => {
+export const Roadmap: FC = () => {
     const items: IItem[] = [
         {
             title: 'Open Sale',
@@ -40,10 +40,10 @@ export const Roadmap:FC = () => {
 
             <div className={style.firstBlock}>
 
-               <h2 className={style.title}>
-                   <span>Our</span>
-                   <span> roadmap</span>
-               </h2>
+                <h2 className={style.title}>
+                    <span>Our</span>
+                    <span> roadmap</span>
+                </h2>
 
                 <p className={style.text}>
                     We won’t leave our community behind- our roadmap will be produced in consultation
@@ -52,6 +52,27 @@ export const Roadmap:FC = () => {
             </div>
 
             <div className={style.secondBlock}>
+                <div className={style.items}>
+                    {
+                        items.map((item, index) => (
+                                <div key={index}
+                                     className={style.itemWrapper}
+                                >
+                                    <div className={style.innerWrapper}>
+                                        <p className={style.title}>{item.title}</p>
+                                        <p className={style.text}>{item.text}</p>
+
+                                    </div>
+
+                                    <div className={style.circle}>
+
+                                    </div>
+
+                                </div>
+                            )
+                        )
+                    }
+                </div>
 
             </div>
 
