@@ -1,30 +1,31 @@
 {
   "files": {
-    "main.css": "/token-cm/static/css/main.840f6657.chunk.css",
-    "main.js": "/token-cm/static/js/main.b4d10410.chunk.js",
-    "main.js.map": "/token-cm/static/js/main.b4d10410.chunk.js.map",
-    "runtime-main.js": "/token-cm/static/js/runtime-main.b4232d2c.js",
-    "runtime-main.js.map": "/token-cm/static/js/runtime-main.b4232d2c.js.map",
+    "main.css": "/token-cm/static/css/main.41de4a73.chunk.css",
+    "main.js": "/token-cm/static/js/main.d8443e5a.chunk.js",
+    "main.js.map": "/token-cm/static/js/main.d8443e5a.chunk.js.map",
+    "runtime-main.js": "/token-cm/static/js/runtime-main.e68d5f86.js",
+    "runtime-main.js.map": "/token-cm/static/js/runtime-main.e68d5f86.js.map",
     "static/css/2.e6a755d0.chunk.css": "/token-cm/static/css/2.e6a755d0.chunk.css",
-    "static/js/2.0af9d508.chunk.js": "/token-cm/static/js/2.0af9d508.chunk.js",
-    "static/js/2.0af9d508.chunk.js.map": "/token-cm/static/js/2.0af9d508.chunk.js.map",
-    "static/js/3.4c878d5f.chunk.js": "/token-cm/static/js/3.4c878d5f.chunk.js",
-    "static/js/3.4c878d5f.chunk.js.map": "/token-cm/static/js/3.4c878d5f.chunk.js.map",
+    "static/js/2.59db086d.chunk.js": "/token-cm/static/js/2.59db086d.chunk.js",
+    "static/js/2.59db086d.chunk.js.map": "/token-cm/static/js/2.59db086d.chunk.js.map",
+    "static/js/3.22d67bde.chunk.js": "/token-cm/static/js/3.22d67bde.chunk.js",
+    "static/js/3.22d67bde.chunk.js.map": "/token-cm/static/js/3.22d67bde.chunk.js.map",
     "index.html": "/token-cm/index.html",
     "static/css/2.e6a755d0.chunk.css.map": "/token-cm/static/css/2.e6a755d0.chunk.css.map",
-    "static/css/main.840f6657.chunk.css.map": "/token-cm/static/css/main.840f6657.chunk.css.map",
-    "static/js/2.0af9d508.chunk.js.LICENSE.txt": "/token-cm/static/js/2.0af9d508.chunk.js.LICENSE.txt",
+    "static/css/main.41de4a73.chunk.css.map": "/token-cm/static/css/main.41de4a73.chunk.css.map",
+    "static/js/2.59db086d.chunk.js.LICENSE.txt": "/token-cm/static/js/2.59db086d.chunk.js.LICENSE.txt",
     "static/media/00.ce6fce68.jpg": "/token-cm/static/media/00.ce6fce68.jpg",
     "static/media/01.0b10f511.jpg": "/token-cm/static/media/01.0b10f511.jpg",
     "static/media/02.7f1bad66.jpg": "/token-cm/static/media/02.7f1bad66.jpg",
     "static/media/03.d1298c47.jpg": "/token-cm/static/media/03.d1298c47.jpg",
-    "static/media/icons.symbol.c15d840d.svg": "/token-cm/static/media/icons.symbol.c15d840d.svg"
+    "static/media/icons.symbol.8f19b896.svg": "/token-cm/static/media/icons.symbol.8f19b896.svg",
+    "static/media/welcome-mask.1ae24ae2.png": "/token-cm/static/media/welcome-mask.1ae24ae2.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.b4232d2c.js",
+    "static/js/runtime-main.e68d5f86.js",
     "static/css/2.e6a755d0.chunk.css",
-    "static/js/2.0af9d508.chunk.js",
-    "static/css/main.840f6657.chunk.css",
-    "static/js/main.b4d10410.chunk.js"
+    "static/js/2.59db086d.chunk.js",
+    "static/css/main.41de4a73.chunk.css",
+    "static/js/main.d8443e5a.chunk.js"
   ]
 }
