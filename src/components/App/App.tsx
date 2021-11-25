@@ -4,6 +4,7 @@ import {Header} from "../Header/Header";
 import {Main} from "../Main/Main";
 import {SvgIcon} from "../common/SvgIcon/SvgIcon";
 import {BurgerMenu} from "../BurgerMenu/BurgerMenu";
+import { Footer } from '../Footer/Footer';
 
 export const App = () => {
     const [isBurgerIsOpen, setBurgerIsOpen] = useState(false);
@@ -34,6 +35,7 @@ export const App = () => {
             />
             <Header/>
             <Main/>
+            <Footer/>
         </div>
     );
 }

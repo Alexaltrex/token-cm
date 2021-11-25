@@ -21,10 +21,10 @@ export const Welcome = () => {
                     NFTs and the Metaverse are the future, but investing in the space isn’t easy. We make it simple.
                 </p>
 
-                <Link to='/airdrop'
+                <Link to='/pre-sale'
                       className={style.link}
                 >
-                    Airdrop
+                    PRE-SALE
                 </Link>
 
             </div>

@@ -1,13 +1,16 @@
-import clsx from 'clsx';
-import React, {useState} from 'react';
+import React from 'react';
 import style from './header.module.scss';
-import {Link} from "react-router-dom";
+import {HashLink} from 'react-router-hash-link';
 
 export const logotype = 'Logotype'
 export const links = [
     {
         title: 'About',
         link: 'about',
+    },
+    {
+        title: 'Tokenomics',
+        link: 'tokenomics',
     },
     {
         title: 'Roadmap',
@@ -22,6 +25,10 @@ export const links = [
         link: 'community',
     },
     {
+        title: 'Pre-sale',
+        link: 'pre-sale',
+    },
+    {
         title: 'Airdrop',
         link: 'airdrop',
     },
@@ -29,35 +36,30 @@ export const links = [
 
 export const Header = () => {
 
-    const [selectLinkIndex, setSelectLinkIndex] = useState(-1);
-
     return (
-        <div className={style.header}>
-            <p className={style.logo}>{logotype}</p>
+        <header className={style.header}>
+            <HashLink className={style.logo}
+                      to='/'
+            >
+                {logotype}
+            </HashLink>
 
-            <div className={style.links}>
+            <nav className={style.links}>
                 {
-                    links.map((link, index) => (
-                        <Link key={index}
-                              to={
-                                  index !== 4 ?
-                                      {
-                                          pathname: `/`,
-                                          hash: `${link.link}`,
-                                      }
-                                      : `/airdrop`
-                              }
-                              className={clsx({
-                                  [style.link]: true,
-                                  [style.link_selected]: index === selectLinkIndex,
-                              })}
-                              onClick={() => setSelectLinkIndex(index)}
+                    links.map(({link, title}, index) => (
+                        <HashLink key={index}
+                                  to={
+                                      link === 'pre-sale' || link === 'airdrop'
+                                          ? `/${link}`
+                                          : `/#${link}`
+                                  }
+                                  className={style.link}
                         >
-                            {link.title}
-                        </Link>
+                            {title}
+                        </HashLink>
                     ))
                 }
-            </div>
+            </nav>
 
             <a className={style.button}
                href="#"
@@ -65,7 +67,7 @@ export const Header = () => {
                 Connect Wallet
             </a>
 
-        </div>
+        </header>
     );
 }
 

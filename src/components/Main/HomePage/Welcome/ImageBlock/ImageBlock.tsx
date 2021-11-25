@@ -4,6 +4,7 @@ import src0 from '../../../../../assets/img/00.jpg';
 import src1 from '../../../../../assets/img/01.jpg';
 import src2 from '../../../../../assets/img/02.jpg';
 import src3 from '../../../../../assets/img/03.jpg';
+import mask from '../../../../../assets/img/welcome-mask.png'
 import clsx from "clsx";
 import './style.css'
 
@@ -21,7 +22,7 @@ export const ImageBlock = () => {
     }, [index]);
 
     useEffect(() => {
-        console.log(index)
+        //console.log(index)
     }, [index])
 
     return (
@@ -31,11 +32,15 @@ export const ImageBlock = () => {
                  className={style.image}
             />
 
+            <img className={style.mask}
+                 src={mask}
+                 alt=""
+            />
+
             <div className={clsx({
                 [style.back]: true,
                 'image-block-animation': true
             })}
-
             />
 
         </div>

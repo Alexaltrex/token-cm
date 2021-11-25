@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   @media all and (min-width: 1440px) {
     margin-top: 70px;
     flex-direction: row-reverse;
@@ -14,13 +15,21 @@
   }
 
   .imageBlock {
+    position: relative;
+    z-index: 10;
     padding: 0px 27px;
     @media all and (min-width: 1440px) {
       margin-left: 97px;
+      flex-basis: calc(100% - 15px);
+
+      display: flex;
+      justify-content: flex-end;
     }
   }
 
   .textBlock {
+    position: relative;
+    z-index: 11;
     margin-top: 57px;
     display: flex;
     flex-direction: column;
@@ -28,8 +37,8 @@
 
     @media all and (min-width: 1440px) {
       align-items: normal;
-      flex-grow: 1;
       margin-top: 0px;
+      flex-basis: calc(100% - 15px);
     }
 
     .title {
@@ -46,6 +55,9 @@
         font-weight: 500;
         font-size: 34px;
         line-height: 125%;
+        @media all and (min-width: 1440px) {
+          font-size: 64px;
+        }
       }
 
       p:first-child {
@@ -75,6 +87,7 @@
       @media all and (min-width: 1440px) {
         margin-top: 36px;
         text-align: left;
+        font-size: 18px;
       }
     }
 
@@ -82,7 +95,6 @@
       text-decoration: none;
       width: 138px;
       height: 52px;
-      background: linear-gradient(94.2deg, #A6C17B 4.11%, #E1A56A 58.6%, #D5517F 106.2%);
       border-radius: 8px;
       font-family: Poppins;
       font-style: normal;
@@ -96,6 +108,10 @@
       text-transform: uppercase;
       margin-top: 26px;
       transition: all 0.3s;
+      background: #DE8F70;
+      &:hover {
+        background: #BCC17B;
+      }
 
       @media all and (min-width: 1440px) {
         margin-top: 56px;
@@ -103,9 +119,7 @@
         height: 62px;
       }
 
-      &:hover {
-        background: linear-gradient(89.64deg, #A6C17B 7.43%, #E1A56A 153.77%);
-      }
+
 
     }
 
