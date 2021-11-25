@@ -98,6 +98,15 @@ export const Airdrop: FC = () => {
     const [timeIsOver, setTimeIsOver] = useState(false);
     const [time, setTime] = useState(0);
     const [start, setStart] = useState(false);
+
+    const randomLink = localStorage.getItem('refLink');
+    if (!randomLink) {
+        const randomLink = Math.random().toString(36).substring(2,12);
+        localStorage.setItem('refLink', randomLink);
+    }
+
+    const refLink = randomLink;
+
     useEffect(() => {
         const time = new Date(dateEnd.getTime() - new Date().getTime()).getTime();
         if (time > 0 && !timeIsOver) {
@@ -181,7 +190,7 @@ export const Airdrop: FC = () => {
                         <div className={style.infoBlock}>
                             <p className={style.link}>
                                 <span>Refer Link: </span>
-                                <span>https://domainname.net/AD8K</span>
+                                <span>https://domainname.net/{refLink}</span>
                                 <span> </span>
                                 <span>
                                     <SvgIcon icon='copying'/>
