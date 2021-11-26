@@ -1,9 +1,10 @@
 import {Formik, FormikHelpers, FormikProps} from "formik";
-import React, {FC, useEffect, useState} from "react";
+import React, {FC, useEffect, useRef, useState} from "react";
 import style from './airdrop.module.scss'
 import clsx from "clsx";
 import {SvgIcon} from "../../../common/SvgIcon/SvgIcon";
 import Modal from 'react-modal';
+import useIntersectionObserver from "@react-hook/intersection-observer";
 
 interface IValues {
     address: string
@@ -59,11 +60,20 @@ const dateEnd = new Date(2021, 11, 24, 5, 55, 30); // дата окончани�
 export const convertToTwoDigit = (num: number): string => num > 9 ? String(num) : `0${num}`;
 
 ///////////////////////////////////////////////////
-export const Airdrop: FC = () => {
+export let Airdrop: React.FC;
+Airdrop = () => {
 
     const initialValues = {
         address: ''
     };
+
+    const data = {
+        address: '',
+        refLink: '',
+    };
+
+// ====================================
+// ====================================
 
     const [submit, setSubmit] = useState(false);
 
@@ -73,7 +83,9 @@ export const Airdrop: FC = () => {
         formikHelpers: FormikHelpers<IValues>
     ) => {
         console.log(values.address);
+        data.address = values.address;
         setSubmit(true);
+        generateRefLink(values);
         formikHelpers.setSubmitting(false);
     };
 
@@ -99,13 +111,18 @@ export const Airdrop: FC = () => {
     const [time, setTime] = useState(0);
     const [start, setStart] = useState(false);
 
-    const randomLink = localStorage.getItem('refLink');
-    if (!randomLink) {
-        const randomLink = Math.random().toString(36).substring(2,12);
-        localStorage.setItem('refLink', randomLink);
-    }
+    const generateRefLink = (values: IValues) => {
+        if (localStorage.getItem(`${values.address}`) == null) {
+            data.refLink = Math.random().toString(36).substring(2, 12);
+            localStorage.setItem(`${values.address}`, `${data.refLink}`);
+            // @ts-ignore
+            document.querySelector("#myspan").textContent = `https://domainname.net/${data.refLink}`;
+        } else {
+            // @ts-ignore
+            document.querySelector("#myspan").textContent = `https://domainname.net/${localStorage.getItem(values.address)}`;
+        }
+    };
 
-    const refLink = randomLink;
 
     useEffect(() => {
         const time = new Date(dateEnd.getTime() - new Date().getTime()).getTime();
@@ -129,7 +146,6 @@ export const Airdrop: FC = () => {
             clearTimeout(timeId);
         }
     }, [time]);
-
 
 
     return (
@@ -190,7 +206,9 @@ export const Airdrop: FC = () => {
                         <div className={style.infoBlock}>
                             <p className={style.link}>
                                 <span>Refer Link: </span>
-                                <span>https://domainname.net/{refLink}</span>
+                                <span
+                                    id="myspan"
+                                >https://domainname.net/{data.refLink}</span>
                                 <span> </span>
                                 <span>
                                     <SvgIcon icon='copying'/>
@@ -253,7 +271,10 @@ export const Airdrop: FC = () => {
                         Popup title
                     </p>
                     <p className={style.text}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     </p>
 
                 </div>
@@ -261,4 +282,4 @@ export const Airdrop: FC = () => {
 
         </div>
     )
-}
+};
