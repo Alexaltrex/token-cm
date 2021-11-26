@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/token-cm/static/css/main.97f687b6.chunk.css",
-    "main.js": "/token-cm/static/js/main.290dd116.chunk.js",
-    "main.js.map": "/token-cm/static/js/main.290dd116.chunk.js.map",
+    "main.js": "/token-cm/static/js/main.a1af32e6.chunk.js",
+    "main.js.map": "/token-cm/static/js/main.a1af32e6.chunk.js.map",
     "runtime-main.js": "/token-cm/static/js/runtime-main.4a6d2327.js",
     "runtime-main.js.map": "/token-cm/static/js/runtime-main.4a6d2327.js.map",
     "static/css/2.e6a755d0.chunk.css": "/token-cm/static/css/2.e6a755d0.chunk.css",
@@ -18,7 +18,7 @@
     "static/media/01.0b10f511.jpg": "/token-cm/static/media/01.0b10f511.jpg",
     "static/media/02.7f1bad66.jpg": "/token-cm/static/media/02.7f1bad66.jpg",
     "static/media/03.d1298c47.jpg": "/token-cm/static/media/03.d1298c47.jpg",
-    "static/media/icons.symbol.23764237.svg": "/token-cm/static/media/icons.symbol.23764237.svg",
+    "static/media/icons.symbol.c66635f8.svg": "/token-cm/static/media/icons.symbol.c66635f8.svg",
     "static/media/welcome-mask.1ae24ae2.png": "/token-cm/static/media/welcome-mask.1ae24ae2.png"
   },
   "entrypoints": [
@@ -26,6 +26,6 @@
     "static/css/2.e6a755d0.chunk.css",
     "static/js/2.92f0fb1a.chunk.js",
     "static/css/main.97f687b6.chunk.css",
-    "static/js/main.290dd116.chunk.js"
+    "static/js/main.a1af32e6.chunk.js"
   ]
 }
